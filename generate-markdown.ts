@@ -14,7 +14,7 @@ export const generateMarkdown = (tweets: ThreadTweet[], options: Options) => {
 
   tweets.forEach((tweet) => {
     output += tweet.text;
-    if (ensurePeriods && !tweet.text.match(/.+[.,!?-…]$/)) {
+    if (ensurePeriods && !tweet.text.match(/.+[.,!?…-]$/)) {
       output += '.';
     }
     output += '\n\n';
